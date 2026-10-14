@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageSpeed Insights Report - 10/14/2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 30px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1em;
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .summary-card h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .summary-card .number {
+            font-size: 36px;
+            font-weight: bold;
+        }
+        
+        .results-table-container {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 13px;
+        }
+        
+        thead {
+            background: #333;
+            color: white;
+        }
+        
+        th {
+            padding: 12px 8px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 12px 8px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .url-cell {
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .score {
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            min-width: 45px;
+            text-align: center;
+        }
+        
+        .score-good {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .score-average {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .score-poor {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-pass {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .status-fail {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .metric-value {
+            font-size: 12px;
+        }
+        
+        .metric-good {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        .metric-needs-improvement {
+            color: #ffc107;
+            font-weight: 600;
+        }
+        
+        .metric-poor {
+            color: #dc3545;
+            font-weight: 600;
+        }
+        
+        .device-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        
+        .device-mobile {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .device-desktop {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .report-info {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .report-info p {
+            margin: 5px 0;
+            color: #333;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 PageSpeed Insights Report</h1>
+        <p class="subtitle">Comprehensive performance analysis for all pages</p>
+        
+        <div class="report-info">
+            <p><strong>Generated:</strong> 10/14/2026, 3:02:49 PM</p>
+            <p><strong>Total URLs Analyzed:</strong> 37</p>
+            <p><strong>Total Tests:</strong> 74 (Mobile + Desktop)</p>
+        </div>
+        
+        <div class="summary-cards">
+            <div class="summary-card">
+                <h3>Total URLs</h3>
+                <div class="number">37</div>
+            </div>
+            <div class="summary-card">
+                <h3>Passed</h3>
+                <div class="number">46</div>
+            </div>
+            <div class="summary-card">
+                <h3>Failed</h3>
+                <div class="number">28</div>
+            </div>
+            <div class="summary-card">
+                <h3>Success Rate</h3>
+                <div class="number">62%</div>
+            </div>
+        </div>
+        
+        <h2>Detailed Results</h2>
+        
+        <div class="results-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>URL</th>
+                        <th>Device</th>
+                        <th>Performance</th>
+                        <th>Accessibility</th>
+                        <th>Best Practices</th>
+                        <th>SEO</th>
+                        <th>FCP</th>
+                        <th>LCP</th>
+                        <th>CLS</th>
+                        <th>Status</th>
+                        <th>Issues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">91</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.11s</span></td>
+                        <td><span class="metric-value metric-good">1.86s</span></td>
+                        <td><span class="metric-value metric-good">0.042</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.42s</span></td>
+                        <td><span class="metric-value metric-good">0.85s</span></td>
+                        <td><span class="metric-value metric-good">0.031</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dr-peter-murchie/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdr-peter-murchie%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dr-peter-murchie/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">91</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.11s</span></td>
+                        <td><span class="metric-value metric-good">0.95s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dr-peter-murchie/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdr-peter-murchie%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dr-peter-murchie/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">93</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.56s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dr-elizabeth-cheng/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdr-elizabeth-cheng%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dr-elizabeth-cheng/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-good">1.34s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dr-elizabeth-cheng/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdr-elizabeth-cheng%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dr-elizabeth-cheng/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.5s</span></td>
+                        <td><span class="metric-value metric-good">0.048</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dr-clairise-parker/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdr-clairise-parker%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dr-clairise-parker/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-good">1.34s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dr-clairise-parker/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdr-clairise-parker%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dr-clairise-parker/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.5s</span></td>
+                        <td><span class="metric-value metric-good">0.004</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/meet-the-staff/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fmeet-the-staff%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/meet-the-staff/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-good">1.73s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/meet-the-staff/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fmeet-the-staff%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/meet-the-staff/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.75s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/our-mission-and-beliefs/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Four-mission-and-beliefs%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/our-mission-and-beliefs/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">85</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-poor">4.31s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 85 (required: ≥90); LCP: 4.31s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/our-mission-and-beliefs/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Four-mission-and-beliefs%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/our-mission-and-beliefs/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/tv-appearances/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Ftv-appearances%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/tv-appearances/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">81</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">4.4s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 81 (required: ≥90); LCP: 4.40s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/tv-appearances/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Ftv-appearances%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/tv-appearances/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.34s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/sterilization-protocol/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fsterilization-protocol%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/sterilization-protocol/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.11s</span></td>
+                        <td><span class="metric-value metric-good">1.12s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/sterilization-protocol/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fsterilization-protocol%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/sterilization-protocol/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.004</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dental-implants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdental-implants%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dental-implants/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.13s</span></td>
+                        <td><span class="metric-value metric-good">1.43s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dental-implants/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdental-implants%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dental-implants/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/invisalign-clear-aligners/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Finvisalign-clear-aligners%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/invisalign-clear-aligners/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">93</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-good">1.33s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/invisalign-clear-aligners/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Finvisalign-clear-aligners%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/invisalign-clear-aligners/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.027</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dental-crowns/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdental-crowns%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dental-crowns/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">81</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.14s</span></td>
+                        <td><span class="metric-value metric-poor">4.45s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 81 (required: ≥90); LCP: 4.45s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dental-crowns/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdental-crowns%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dental-crowns/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.014</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/cosmetic-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fcosmetic-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/cosmetic-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.26s</span></td>
+                        <td><span class="metric-value metric-good">1.32s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/cosmetic-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fcosmetic-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/cosmetic-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">87</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-poor">0.264</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 87 (required: ≥90); CLS: 0.264 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/porcelain-veneers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fporcelain-veneers%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/porcelain-veneers/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">79</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.11s</span></td>
+                        <td><span class="metric-value metric-poor">4.45s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 79 (required: ≥90); LCP: 4.45s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/porcelain-veneers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fporcelain-veneers%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/porcelain-veneers/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.013</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/resin-veneers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fresin-veneers%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/resin-veneers/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">81</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-poor">4.41s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 81 (required: ≥90); LCP: 4.41s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/resin-veneers/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fresin-veneers%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/resin-veneers/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.019</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dental-cleanings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdental-cleanings%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dental-cleanings/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.12s</span></td>
+                        <td><span class="metric-value metric-good">1.13s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dental-cleanings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdental-cleanings%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dental-cleanings/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">91</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.52s</span></td>
+                        <td><span class="metric-value metric-good">0.55s</span></td>
+                        <td><span class="metric-value metric-good">0.001</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/preventative-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fpreventative-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/preventative-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.25s</span></td>
+                        <td><span class="metric-value metric-good">1.3s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/preventative-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fpreventative-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/preventative-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">73</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-poor">0.327</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 73 (required: ≥90); CLS: 0.327 (required: ≤0.1)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dental-hygiene/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdental-hygiene%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dental-hygiene/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">81</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-poor">4.43s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 81 (required: ≥90); LCP: 4.43s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dental-hygiene/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdental-hygiene%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dental-hygiene/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.69s</span></td>
+                        <td><span class="metric-value metric-good">0.75s</span></td>
+                        <td><span class="metric-value metric-good">0.009</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/teeth-whitening/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fteeth-whitening%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/teeth-whitening/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">85</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-poor">4.33s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 85 (required: ≥90); LCP: 4.33s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/teeth-whitening/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fteeth-whitening%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/teeth-whitening/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">94</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.015</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/family-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Ffamily-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/family-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">78</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.11s</span></td>
+                        <td><span class="metric-value metric-poor">4.5s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 78 (required: ≥90); LCP: 4.50s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/family-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Ffamily-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/family-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.008</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/emergency-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Femergency-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/emergency-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">82</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-poor">4.36s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 82 (required: ≥90); LCP: 4.36s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/emergency-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Femergency-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/emergency-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.4s</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.007</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dental-extractions/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdental-extractions%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dental-extractions/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">91</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.13s</span></td>
+                        <td><span class="metric-value metric-good">1.44s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dental-extractions/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdental-extractions%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dental-extractions/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/sedation-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fsedation-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/sedation-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">79</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-poor">4.46s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 79 (required: ≥90); LCP: 4.46s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/sedation-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fsedation-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/sedation-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.014</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dental-fillings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdental-fillings%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dental-fillings/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">79</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.12s</span></td>
+                        <td><span class="metric-value metric-poor">4.46s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 79 (required: ≥90); LCP: 4.46s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dental-fillings/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdental-fillings%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dental-fillings/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.014</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/digital-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdigital-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/digital-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">80</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.11s</span></td>
+                        <td><span class="metric-value metric-poor">4.45s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 80 (required: ≥90); LCP: 4.45s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/digital-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdigital-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/digital-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">95</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/pediatric-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fpediatric-dentistry%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/pediatric-dentistry/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">85</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-poor">4.31s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 85 (required: ≥90); LCP: 4.31s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/pediatric-dentistry/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fpediatric-dentistry%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/pediatric-dentistry/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">93</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.029</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/post-treatment-forms/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fpost-treatment-forms%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/post-treatment-forms/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">98</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/post-treatment-forms/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fpost-treatment-forms%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/post-treatment-forms/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.83s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/financing-and-insurance/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Ffinancing-and-insurance%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/financing-and-insurance/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">85</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">92</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-poor">4.32s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 85 (required: ≥90); LCP: 4.32s (required: ≤2.5s); SEO: 92 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/financing-and-insurance/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Ffinancing-and-insurance%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/financing-and-insurance/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-poor">92</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.006</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">SEO: 92 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dental-cost-guide/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdental-cost-guide%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dental-cost-guide/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">83</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">4.32s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 83 (required: ≥90); LCP: 4.32s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/dental-cost-guide/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fdental-cost-guide%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/dental-cost-guide/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">90</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.007</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/smile-club/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fsmile-club%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/smile-club/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">78</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.11s</span></td>
+                        <td><span class="metric-value metric-poor">4.51s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 78 (required: ≥90); LCP: 4.51s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/smile-club/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fsmile-club%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/smile-club/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">92</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.46s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/children-events/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fchildren-events%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/children-events/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">97</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-good">1.28s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/children-events/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fchildren-events%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/children-events/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.003</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/faqs/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Ffaqs%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/faqs/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">81</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">4.41s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 81 (required: ≥90); LCP: 4.41s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/faqs/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Ffaqs%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/faqs/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.83s</span></td>
+                        <td><span class="metric-value metric-good">0.017</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/reasons-for-dental-treatment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Freasons-for-dental-treatment%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/reasons-for-dental-treatment/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">84</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-poor">4.31s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 84 (required: ≥90); LCP: 4.31s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/reasons-for-dental-treatment/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Freasons-for-dental-treatment%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/reasons-for-dental-treatment/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/smile-gallery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fsmile-gallery%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/smile-gallery/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">78</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">4.95s</span></td>
+                        <td><span class="metric-value metric-good">0.024</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 78 (required: ≥90); LCP: 4.95s (required: ≤2.5s); Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/smile-gallery/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fsmile-gallery%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/smile-gallery/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">91</span></td>
+                        <td><span class="score score-poor">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.44s</span></td>
+                        <td><span class="metric-value metric-good">0.5s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.183</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.183 (required: ≤0.1); Accessibility: 99 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/google-reviews/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fgoogle-reviews%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/google-reviews/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-poor">43</span></td>
+                        <td><span class="score score-poor">96</span></td>
+                        <td><span class="score score-average">54</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-poor">3.37s</span></td>
+                        <td><span class="metric-value metric-poor">6.09s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 43 (required: ≥90); FCP: 3.37s (required: ≤1.8s); LCP: 6.09s (required: ≤2.5s); Accessibility: 96 (required: 100)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/google-reviews/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fgoogle-reviews%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/google-reviews/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-average">71</span></td>
+                        <td><span class="score score-poor">96</span></td>
+                        <td><span class="score score-average">54</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.53s</span></td>
+                        <td><span class="metric-value metric-good">0.85s</span></td>
+                        <td><span class="metric-value metric-good">0.002</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 71 (required: ≥90); Accessibility: 96 (required: 100)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/video-testimonials/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fvideo-testimonials%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/video-testimonials/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-good">1.1s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/video-testimonials/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fvideo-testimonials%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/video-testimonials/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">99</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.31s</span></td>
+                        <td><span class="metric-value metric-good">0.32s</span></td>
+                        <td><span class="metric-value metric-good">0.019</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fcontact-us%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/contact-us/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">80</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.35s</span></td>
+                        <td><span class="metric-value metric-poor">4.44s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 80 (required: ≥90); LCP: 4.44s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/contact-us/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fcontact-us%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/contact-us/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">96</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.48s</span></td>
+                        <td><span class="metric-value metric-good">0.004</span></td>
+                        <td><span class="status-pass">PASS</span></td>
+                        <td class="metric-value">All checks passed</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fsite-map%2F&form_factor=mobile" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/site-map/</a></td>
+                        <td><span class="device-badge device-mobile">mobile</span></td>
+                        <td><span class="score score-average">83</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">1.09s</span></td>
+                        <td><span class="metric-value metric-poor">4.34s</span></td>
+                        <td><span class="metric-value metric-good">0</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">Performance: 83 (required: ≥90); LCP: 4.34s (required: ≤2.5s)</td>
+                    </tr>
+                    <tr style="background: #fff5f5;">
+                        <td class="url-cell" title="https://www.goochlanddentistry.com/site-map/"><a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fwww.goochlanddentistry.com%2Fsite-map%2F&form_factor=desktop" target="_blank" style="color: #667eea; text-decoration: none;">https://www.goochlanddentistry.com/site-map/</a></td>
+                        <td><span class="device-badge device-desktop">desktop</span></td>
+                        <td><span class="score score-good">93</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="score score-good">100</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-good">0.3s</span></td>
+                        <td><span class="metric-value metric-needs-improvement">0.171</span></td>
+                        <td><span class="status-fail">FAIL</span></td>
+                        <td class="metric-value">CLS: 0.171 (required: ≤0.1)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+            <h3 style="margin-bottom: 10px;">Scoring Criteria</h3>
+            <ul style="line-height: 1.8; color: #666;">
+                <li><strong>Performance:</strong> Must be ≥90 (Good: Green, Average: Yellow, Poor: Red)</li>
+                <li><strong>Accessibility:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>SEO:</strong> Must be 100 (Pass: Green, Fail: Red)</li>
+                <li><strong>FCP (First Contentful Paint):</strong> Must be ≤1.8s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>LCP (Largest Contentful Paint):</strong> Must be ≤2.5s (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+                <li><strong>CLS (Cumulative Layout Shift):</strong> Must be ≤0.1 (Good: Green, Needs Improvement: Yellow, Poor: Red)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
